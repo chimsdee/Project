@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/bootsrap3.3.5.mini.css">
+    <link rel="stylesheet" href="AOS (Animate On Scroll)/aos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    body.light-theme {
+        background-color: #ffffff;
+        color: #000000;
+        border-left: #000000;
+    }
+
+    /* Dark Theme Styles */
+    body.dark-theme {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        border-left: #ffffff;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .slide {
+        display: inline-block;
+        width: 100%;
+        height: 700px;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .svg {
+        background: linear-gradient(to right, rgba(4, 1, 1, 0.758), rgba(132, 132, 248, 0.737), rgba(4, 1, 1, 0.758));
+    }
+
+    .countDisplay {
+        text-align: center;
+        width: 240px;
+
+        font-weight: bolder;
+        font-size: 40px;
+    }
+
+    #scrollToTopBtn {
+        display: none;
+        /* Hide the button by default */
+        position: fixed;
+        /* Fixed position so it stays in the viewport */
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        /* Ensure it's above other elements */
+        background-color: rgb(35, 41, 86);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    #scrollToTopBtn:hover {
+        background-color: darkslategray;
+    }
+
+    li a:hover:not(.active) {
+        -webkit-text-fill-color: rgb(3, 129, 129);
+    }
+</style>
+
+<body style="font-family: 'Times New Roman', Times, serif; ;">
+    <nav class="nav navbar-inverse navbar-fixed-top"
+        style="padding: 20px; background: linear-gradient(to left,darkslategray,darkslategray, rgba(255, 255, 255, 0),darkslategray)">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class=""></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"
+                    style="font-size:60px; font-family: 'Times New Roman', Times, serif; color: #ffffff;"
+                    href="#"><b>CDE
+                        Decor</b><span><img src="IMG/animated cloud.svg" alt=""></span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="Home.html"
+                            style="font-family: 'Times New Roman', Times, serif; color:#ffffff; font-size:25px;"><b>Home</b><span
+                                class="sr-only">(current)</span></a></li>
+                    <li><a class="active" href="#"
+                            style="font-family: 'Times New Roman', Times, serif; color: rgb(0, 0, 0); font-size:25px;"><b>About</b></a>
+                    </li>
+                    <li><a href="Services.html"
+                            style="font-family: 'Times New Roman', Times, serif; color: #ffffff; font-size:25px;"><b>Services</b></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"
+                            style="border-radius: 20px; font-family: 'Times New Roman', Times, serif; color:#ffffff ; font-size:25px;"><b>Pages</b><span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu"
+                            style="border-radius: 20px; font-family: 'Times New Roman', Times, serif; color:#ffffff ; font-size:15px;">
+                            <li><a style="border-radius: 20px; font-size:20px;" href="404page.html"><b>404 Page</b></a>
+                            </li>
+                            <li><a style="border-radius: 20px; font-size:20px;" href="#"><b>Show Room</b></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Contact.html"
+                            style="font-family: 'Times New Roman', Times, serif; color: #ffffff; font-size:25px;"><b>Contacts</b></a>
+                    </li>
+                    <li>
+                        <div id="theme-toggle">
+                            <img id="theme-button" src="IMG/mdi--theme-light-dark.svg" alt="Theme Icon">
+                        </div>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search"
+                    style="font-family: 'Times New Roman', Times, serif; color: #ffffff; font-size:20px; font-weight: bold;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default"><b
+                            style="font-family: 'Times New Roman', Times, serif; color: #0f0f0f; font-size:15px;">Submit</b></button>
+                </form>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div>
+        <img style="filter: brightness(50%);" src="IMG/pic2.jpg" width="100%" height="500px" alt="">
+        <div class="carousel-caption" style="margin-bottom: 200px;">
+            <h1><b style="color:#ffffff; font-size: 100px;">Company Overview</b></h1>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 50px; margin-left: 30px;">
+        <div class="col-md-6" data-aos="fade-left" data-aos-offset="10" data-aos-easing="ease-in-sine"
+            data-aos-duration="1500px">
+            <h1 style="font-weight: bolder; font-weight: bolder;">Designing Cozy Interiors <br> Since 2010, Always
+                Innovating.</h1>
+            <p style="color: #707070; font-weight: bold; font-size: 20px;">We are a team of professional, energetic
+                individuals with talented designers and experienced managers. Our goal is to guide clients through
+                flawless and timely execution of any residential design project. Since day one, we've delivered
+                creative, cozy interiors worldwide.</p>
+            <hr style="width:90%;">
+
+            <div class="row">
+                <p style=" font-weight: bold; font-size: 15px;">Interior Design</p>
+                <div class="progress" style="height: 10px; width: 90%;">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 80%; background-color: rgb(28, 90, 90);">
+                        <span class="sr-only">80% Complete</span>
+                    </div>
+                </div>
+                <p style="font-weight: bold; font-size: 15px;">Consultations</p>
+                <div class="progress" style="height: 10px; width: 90%;">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 50%; background-color: rgb(28, 90, 90);">
+                        <span class="sr-only">50% Complete</span>
+                    </div>
+                </div>
+                <button class="btn btn-xs center-block"
+                    style="border-radius: 10px; color: #ffffff; background: linear-gradient(to right,rgba(4, 1, 1, 0.758),darkslategray,rgba(4, 1, 1, 0.758));"><a
+                        style="color: #ffffff;" class="navbar-brand" href="404page.html"><b>Free
+                            Consultation</b></a></button>
+            </div><br><br>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-offset="10" data-aos-easing="ease-in-sine"
+            data-aos-duration="3500px">
+            <img class="img-rounded center-block" src="IMG/about1.jpg" width="500px" height="436px" alt="">
+        </div>
+    </div>
+
+    <div class="row"
+        style="background: linear-gradient(to bottom,darkslategray,darkslategray,rgba(255,255,255,0)); margin: 10px; border-radius: 10px;">
+        <h1 style="font-size: 50px; text-align: center;"><b>Personalize existing interiors to <br> suit your needs with
+                our team</b></h1>
+        <p style="color: rgb(244, 244, 255); font-weight: bold; font-size: 20px; text-align: center;">Our interior decor
+            company aims to create captivating spaces that reflect individual <br> styles and enhance daily living
+            experiences through innovative design solutions.</p><br><br>
+        <div data-aos="fade-down" data-aos-offset="10" data-aos-easing="ease-in-sine" data-aos-duration="1500px"
+            class="col-md-6 col-lg-6" style="margin-left: 100px;">
+
+            <img style="margin-left: 90px;" src="IMG/medal.svg" alt="">
+            <span style="font-size: 25px;"><b>Award-Winning</b>
+                <p style="color: rgb(244, 244, 255); font-weight: bold; font-size: 20px; margin-left: 90px;">
+                    Recognized for award-winning designs, setting trends in <br> interior decor excellence.</p>
+                <img style="margin-left: 90px;" src="IMG/lightbulb.svg" alt="">
+                <span style="font-size: 25px;"><b>Creative Ideas</b>
+                    <p style="color: rgb(244, 244, 255); font-weight: bold; font-size: 20px; margin-left: 90px;">
+                        Innovative concepts redefine spaces, elevating interiors <br> with artistic flair.</p>
+                    <img style="margin-left: 90px;" src="IMG/phonecall.svg" alt="">
+                    <span><b>Unlimited Support</b>
+                        <p style="color:rgb(244, 244, 255); font-weight: bold; font-size: 20px; margin-left: 90px;">
+                            Endless support: We're here to guide and assist with all <br> your interior needs</p>
+        </div>
+        <div data-aos="fade-up" data-aos-offset="10" data-aos-easing="ease-in-sine" data-aos-duration="3500px">
+            <img class="img-rounded" src="IMG/about1.jpg" width="500px" height="436px" alt="">
+        </div><br><br>
+    </div>
+    <button id="scrollToTopBtn"><img src="img/up arrow.svg" alt=""></button>
+
+    <h1 style="font-size: 70px; text-align: center;"><b>Meet Our Team</b></h1>
+    <div class="row" style="margin: 20px;">
+        <div class="card img:hover img col-xs-6 col-sm-6 col-md-3" style="border: hidden;">
+
+            <img style="border-radius: 5px; box-shadow: 10px 10px 10px  #5a5959;" src="IMG/1.webp" width="333px"
+                height="444px" alt="">
+
+            <div class="card-body text-center">
+                <h4 style="font-size: 25px;"><b>Max Stoiber</b></h4>
+                <p style="font-size:20px;"><b>Chief Executive</b></p>
+            </div>
+        </div>
+        <div class="card img:hover img col-xs-6 col-sm-6 col-md-3" style="border: hidden;">
+
+            <img style="border-radius: 5px; box-shadow: 10px 10px 10px  #5a5959;" src="IMG/3.jpeg" width="333px"
+                height="444px" alt="">
+
+            <div class="card-body text-center">
+                <h4 style="font-size: 25px;"><b>Marko Dugonji</b></h4>
+                <p style="font-size:20px;"><b>HR Officer</b></p>
+            </div>
+        </div>
+        <div class="card img:hover img col-xs-6 col-sm-6 col-md-3" style="border: hidden;">
+
+            <img style="border-radius: 5px; box-shadow: 10px 10px 10px  #5a5959;" src="IMG/2.webp" width="333px"
+                height="444px" alt="">
+
+            <div class="card-body text-center">
+                <h4 style="font-size: 25px;"><b>Dhony Abraham</b></h4>
+                <p style="font-size:20px;"><b>Branding Expert</b></p>
+            </div>
+        </div>
+        <div class="card img:hover img col-xs-6 col-sm-6 col-md-3" style="border: hidden;">
+
+            <img style="border-radius: 5px; box-shadow: 10px 10px 10px  #5a5959;" src="IMG/4.jpeg" width="333px"
+                height="444px" alt="">
+
+            <div class="card-body text-center">
+                <h4 style="font-size: 25px;"><b>Rhoda Byrd</b></h4>
+                <p style="font-size:20px;"><b>Ambassador</b></p>
+            </div>
+        </div>
+    </div>
+
+    <hr width="50%" class="center-block">
+
+    <section class="row">
+        <h1 style="font-size: 50px; text-align: center;"><b>How We Work</b></h1>
+        <div class="card img:hover img col-xs-6 col-sm-6 col-md-3" style="border: hidden; margin-left: 90px;">
+
+            <img style="border-radius: 25px; box-shadow: 10px 10px 10px  #5a5959;" src="img/banner1.jpg" width="380px"
+                height="230px" alt="">
+
+            <div class="card-body text-center">
+                <h4 style="font-size: 25px;"><b>Generate Ideas</b></h4>
+                <p style="font-size:20px;"><b>Drive creative concepts for interior design, sparking innovative
+                        ideas.</b></p>
+            </div>
+        </div>
+        <div class="card img:hover img col-xs-6 col-sm-6 col-md-3" style="border: hidden; margin-left: 90px;">
+
+            <img style="border-radius: 25px; box-shadow: 10px 10px 10px  #5a5959;" src="img/banner2.jpg" width="380px"
+                height="230px" alt="">
+
+            <div class="card-body text-center">
+                <h4 style="font-size: 25px;"><b>Create Design</b></h4>
+                <p style="font-size:20px;"><b>Craft unique designs for interior decor, blending style and function.</b>
+                </p>
+            </div>
+        </div>
+        <div class="card img:hover img col-xs-6 col-sm-6 col-md-3" style="border: hidden; margin-left: 90px;">
+
+            <img style="border-radius: 25px; box-shadow: 10px 10px 10px  #5a5959;" src="img/banner3.jpg" width="380px"
+                height="230px" alt="">
+
+            <div class="card-body text-center">
+                <h4 style="font-size: 25px;"><b>Launch Project</b></h4>
+                <p style="font-size:20px;"><b>Initiate stunning projects for interior decor, from concept to
+                        completion.</b></p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div>
+        <svg style="position: relative; top: 15px; width: 101%;" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                fill-opacity="1" class="" fill="darkslategray"></path>
+        </svg>
+    </div>
+
+
+
+    <div class="row" style="background-color: darkslategray;">
+
+        <div class="col-md-6 col-lg-3">
+            <h1 style="margin-left: 20px;"><b>CDE Decor</b><span><img src="IMG/animated cloud.svg" alt=""></span>
+            </h1>
+            <p style="font-size: 16px; margin-left: 20px; color: #ffffff;">
+                <b>We are a team of professional, energetic individuals
+                    with talented designers
+                    and experienced managers available
+                    to guide our clients through the flawless and timely execution of any project.</b>
+            </p>
+            <a href="https://twitter.com/Bozz__KD"><img data-toggle="tooltip" data-placement="bottom"
+                    title="Our Twitter Handle" style="margin-left: 20px;" src="IMG/twitter-x.svg" width="30px"
+                    height="30px" alt=""></a>
+            <a href="https://www.instagram.com/chimsdee/"><img data-toggle="tooltip" data-placement="bottom"
+                    title="Our Instagram Handle" style="margin-left: 20px;" src="IMG/instagram.svg" width="30px"
+                    height="30px" alt=""></a>
+            <a href="https://www.linkedin.com/in/chimsom-elue-338bba2a9/"><img data-toggle="tooltip"
+                    data-placement="bottom" title="Our Linkedin Handle" style="margin-left: 20px;"
+                    src="IMG/linkedin.svg" width="30px" height="30px" alt=""></a>
+        </div>
+        <div class="col-md-6 col-lg-3" style="text-decoration: none !important;">
+
+            <h6 style="font-size: 20px;"><b>Useful links</b></h6>
+            <p style="font-size: 16px;"><a style="color: #ffffff;" href="about.html">About Us</a></p>
+            <p style="font-size: 16px;"><a style="color: #ffffff;" href="services.html">Our Services</a></p>
+            <p style="font-size: 16px;"><a style="color: #ffffff;" href="contact.html">Contact Us</a></p>
+
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+
+            <h6 style="font-size: 20px;"><b>Resources</b></h6>
+            <p style="font-size: 16px;"><a style="color: #ffffff;" href="#interior">Interior Design</a></p>
+            <p style="font-size: 16px;"><a style="color: #ffffff;" href="#services">Decorative Services</a></p>
+            <p style="font-size: 16px;"><a style="color: #ffffff;" href="#design">Furniture Design</a></p>
+            <p style="font-size: 16px;"><a style="color: #ffffff;" href="#design">Lighting Design</a></p>
+            <p style="font-size: 16px;"><a style="color: #ffffff;" href="#soft">Soft Furniture</a></p>
+
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <h6 style="font-size: 20px;"><b>Contact Info</b></h6>
+            <p style="font-size: 16px; color: #ffffff;">Address :1 Aguiyi Ironsi Street Maitama, Abuja, Federal
+                Capital Territory</p>
+            <p style="font-size: 16px; color: #ffffff;" class="mt-2">Phone : <a style="color: #ffffff;"
+                    href="tel:+1(21) 234 4567">+1(21) 234 4567</a></p>
+
+        </div>
+        <div class="col-md-12 col-lg-12">
+            <hr width="50%" class="center-block">
+            <p style="text-align: center;"><b>© 2022 <span><b>CDE Decor</b></span>. All rights reserved. Design by
+                    cdeenterprise</b></p>
+
+        </div>
+    </div>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none";
+            }
+        }
+
+        document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        });
+
+    </script>
+    <script>
+        // Check the current theme from local storage
+        const currentTheme = localStorage.getItem('theme');
+
+        // Set initial theme based on stored value or default to light theme
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+        } else {
+            document.body.classList.add('light-theme');
+        }
+
+        // Function to toggle between light and dark themes
+        function toggleTheme() {
+            if (document.body.classList.contains('light-theme')) {
+                // Switch to dark theme
+                document.body.classList.replace('light-theme', 'dark-theme');
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                // Switch to light theme
+                document.body.classList.replace('dark-theme', 'light-theme');
+                localStorage.setItem('theme', 'light-theme');
+            }
+        }
+
+        // Add event listener to theme toggle button
+        document.getElementById('theme-button').addEventListener('click', toggleTheme);
+    </script>
+    <script>
+        $('.dropdown-toggle').dropdown()
+        $('[data-toggle="tooltip"]').tooltip()
+
+    </script>
+
+    <script src="AOS (Animate On Scroll)/aos.js"></script>
+    <script src="AOS (Animate On Scroll)/main2.js"></script>
+</body>
+
+</html>

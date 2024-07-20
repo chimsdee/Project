@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/bootsrap3.3.5.mini.css">
+    <link rel="stylesheet" href="AOS (Animate On Scroll)/aos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    body.light-theme {
+        background-color: #ffffff;
+        color: #000000;
+        border-left: #000000;
+    }
+
+    /* Dark Theme Styles */
+    body.dark-theme {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        border-left: #ffffff;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .slide {
+        display: inline-block;
+        width: 100%;
+        height: 700px;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .svg {
+        background: linear-gradient(to right, rgba(4, 1, 1, 0.758), rgba(132, 132, 248, 0.737), rgba(4, 1, 1, 0.758));
+    }
+
+    .countDisplay {
+        text-align: center;
+        width: 240px;
+
+        font-weight: bolder;
+        font-size: 40px;
+    }
+
+    #scrollToTopBtn {
+        display: none;
+        /* Hide the button by default */
+        position: fixed;
+        /* Fixed position so it stays in the viewport */
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        /* Ensure it's above other elements */
+        background-color: rgb(35, 41, 86);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    #scrollToTopBtn:hover {
+        background-color: darkslategray;
+    }
+
+    li a:hover:not(.active) {
+        -webkit-text-fill-color: rgb(3, 129, 129);
+    }
+</style>
+
+<body style="font-family: 'Times New Roman', Times, serif; ;">
+    <nav class="nav navbar-inverse navbar-fixed-top"
+        style="padding: 20px; background: linear-gradient(to left,darkslategray,darkslategray, rgba(255, 255, 255, 0),darkslategray)">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class=""></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"
+                    style="font-size:60px; font-family: 'Times New Roman', Times, serif; color: #ffffff;"
+                    href="#"><b>CDE
+                        Decor</b><span><img src="IMG/animated cloud.svg" alt=""></span></a>
+            </div>
+            <button id="scrollToTopBtn"><img src="img/up arrow.svg" alt=""></button>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="Home.html"
+                            style="font-family: 'Times New Roman', Times, serif; color:#ffffff; font-size:25px;"><b>Home</b><span
+                                class="sr-only">(current)</span></a></li>
+                    <li><a href="About.html"
+                            style="font-family: 'Times New Roman', Times, serif; color: #ffffff; font-size:25px;"><b>About</b></a>
+                    </li>
+                    <li><a href="Services.html"
+                            style="font-family: 'Times New Roman', Times, serif; color:#ffffff ; font-size:25px;"><b>Services</b></a>
+                    </li>
+                    <li class="dropdown">
+                        <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false" style="border-radius: 20px; font-family: 'Times New Roman', Times, serif; color:#ffffff ; font-size:25px;"><b>Pages</b><span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="border-radius: 20px; font-family: 'Times New Roman', Times, serif; color:#ffffff ; font-size:15px;">
+                            <li><a style="border-radius: 20px; font-size:20px;" href="#"><b>404 Page</b></a></li>
+                            <li><a style="border-radius: 20px; font-size:20px;" href="#"><b>Show Room</b></a></li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="#"
+                            style="font-family: 'Times New Roman', Times, serif; color: rgb(0, 0, 0); font-size:25px;"><b>Contacts</b></a>
+                    </li>
+                    <li>
+                        <div id="theme-toggle">
+                            <img id="theme-button" src="IMG/mdi--theme-light-dark.svg" alt="Theme Icon">
+                        </div>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search"
+                    style="font-family: 'Times New Roman', Times, serif; color: #ffffff; font-size:20px; font-weight: bold;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default"><b
+                            style="font-family: 'Times New Roman', Times, serif; color: #0f0f0f; font-size:15px;">Submit</b></button>
+                </form>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <marquee behavior="Scroll" direction="right" style="width: 150%; font-size:50px; color:#03438c; margin-top: 100px;">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+        <img src="IMG/error.svg" alt="">
+    </marquee>
+
+    <div class="text-center" style="margin-top: 200px;">
+        <h1 style="font-family: 'Times New Roman', Times, serif;font-size:100pt;"><b>404 Error!!!</b></h1>
+        <h1 style="font-family: 'Times New Roman', Times, serif; color: #fd0404; font: size 200pt; font-weight: bold;"><b>Kindly Return Back</b></h1>
+    </div>
+        <script>
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("scrollToTopBtn").style.display = "block";
+                } else {
+                    document.getElementById("scrollToTopBtn").style.display = "none";
+                }
+            }
+
+            document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+            });
+
+        </script>
+        <script>
+            // Check the current theme from local storage
+            const currentTheme = localStorage.getItem('theme');
+
+            // Set initial theme based on stored value or default to light theme
+            if (currentTheme) {
+                document.body.classList.add(currentTheme);
+            } else {
+                document.body.classList.add('light-theme');
+            }
+
+            // Function to toggle between light and dark themes
+            function toggleTheme() {
+                if (document.body.classList.contains('light-theme')) {
+                    // Switch to dark theme
+                    document.body.classList.replace('light-theme', 'dark-theme');
+                    localStorage.setItem('theme', 'dark-theme');
+                } else {
+                    // Switch to light theme
+                    document.body.classList.replace('dark-theme', 'light-theme');
+                    localStorage.setItem('theme', 'light-theme');
+                }
+            }
+
+            // Add event listener to theme toggle button
+            document.getElementById('theme-button').addEventListener('click', toggleTheme);
+        </script>
+        <script>
+            $('.dropdown-toggle').dropdown()
+            $('[data-toggle="tooltip"]').tooltip()
+
+        </script>
+
+        <script src="AOS (Animate On Scroll)/aos.js"></script>
+        <script src="AOS (Animate On Scroll)/main2.js"></script>
+</body>
+
+</html>
